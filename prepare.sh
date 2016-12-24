@@ -11,7 +11,7 @@ echo -n "Configuring system..."
 ln -sf "/usr/share/zoneinfo/${timezone}" /etc/localtime
 echo "" > /etc/fstab
 sed -e 's/#rc_sys=""/rc_sys="docker"/g' -i /etc/rc.conf
-cat > /etc/fstab <<EOT
+cat > /etc/portage/make.conf <<EOT
 MAKEOPTS="-j$(( $(nproc) + 1 ))"
 CFLAGS="-march=native -O2 -pipe"
 CXXFLAGS="${CFLAGS}"
