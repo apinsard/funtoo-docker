@@ -8,10 +8,6 @@ verify_checksum() {
 build=current
 arch=pure64
 subarch=generic_64-pure64
-flavor=server
-mixins='+no-systemd'
-
-timezone=Europe/Paris
 
 stage3="stage3-latest.tar.xz"
 mirrors="http://build.funtoo.org ftp://ftp.osuosl.org/pub/funtoo"
@@ -64,7 +60,3 @@ echo " Done"
 
 echo "Bootstrapped ${stage3} into /:"
 ls --color -lah
-
-# emerge --sync
-
-# ln -sf "/usr/share/zoneinfo/${timezone}" /etc/localtime
