@@ -1,14 +1,11 @@
-FROM busybox
+FROM funtoo-current-pure64-generic_64
 
 MAINTAINER Antoine Pinsard
 
-ADD build.sh /
 ADD prepare.sh /
 ADD upgrade.sh /
 
-RUN /build.sh
-RUN /prepare.sh
+RUN /prepare.sh server
 RUN /upgrade.sh
 
-
-CMD ["bash"]
+CMD ["bash", "-l"]

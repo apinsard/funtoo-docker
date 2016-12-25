@@ -5,9 +5,9 @@ verify_checksum() {
 }
 
 
-build=current
-arch=pure64
-subarch=generic_64-pure64
+build="$1"
+arch="$2"
+subarch="$3"
 
 stage3="stage3-latest.tar.xz"
 mirrors="http://build.funtoo.org ftp://ftp.osuosl.org/pub/funtoo"
